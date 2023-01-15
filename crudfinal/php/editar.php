@@ -34,8 +34,7 @@ if (isset($_POST["guardar"])){
         location.href='../index.php';
         </script> ";
     } else {
-        echo " <script> alert ('El proyecto [$nombre] NO se ha modificado correctamente');
-        location.href='../index.php';
+        echo " <script> alert ('El proyecto [$nombre] NO se ha modificado correctamente');;
         </script> ";
     }
 
@@ -49,6 +48,9 @@ if (isset($_POST["guardar"])){
 <h2>EDITAR PROYECTO</h2>
             <br>
             <form action="" method="POST">
+
+                <label for="nombre">ID: </label>
+                <input type="text" name="id" id="id" value="<?php echo $id; ?>" disabled> <br><br>
                 
                 <label for="nombre">Nombre: </label>
                 <input type="text" name="nombre" id="nombre" value="<?php echo $nombre; ?>"> <br><br>
