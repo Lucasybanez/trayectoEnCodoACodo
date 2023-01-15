@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botones</title>
+     <!-- Font icons pulled from remix icon CDN (Content delivery network) -->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            font-family: 'Poppins',sans-serif;
+            height:100vh;
+            place-content: center;
+        }
+        button{
+           
+            position: relative;
+            border: none;
+            transition: .4s ease-in;
+            z-index: 1;
+            background-color:#ffffff;
+            font-size: 20px;
+            margin: 20px;
+            padding-left:10px;
+            padding-right:10px;
+            border-radius: 2%;
+
+        }
+        button::before,
+        button::after{
+            position: absolute;
+            content: "";
+            z-index: -1;
+        }
+        .btn-3:hover {
+            background: #ff96ad;
+            box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+        }
+
+        /*animaciones para links*/
+        .list{
+            list-style: none;
+            text-align: center;
+           
+        }
+        .link{
+            display: inline-block;
+            margin-block: 2px;
+            text-decoration: none;
+            color:#fff;
+            position: relative;
+            margin-top:10px;
+            font-size: 1.5rem;
+        }
+        .link::after{
+            content:'';
+            width: 100%;
+            height:1px;
+            background-color: #fff;
+            border-radius:4px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform:scaleX(0);
+            transform-origin: left;
+            transition: transform .25s ease;
+        }
+        .link:hover::after{
+            transform:scaleX(1);
+        }
+
+        /*animaciones para redes sociales*/
+        .icons-wrapper{
+            position: relative;
+            display:flex;
+            justify-content: center;
+            margin-top:20px;
+          
+        }
+
+        .icons-wrapper::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: rgb(37, 37, 37);
+            border-radius: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+        /* ======================== */
+        .icon{
+            display: inline-block; /*Makes the icons inline block level elements. This will let us animate the transform property.*/ 
+            font-size: 44px;
+            animation: float infinite 4s ease-in-out ; 
+            /*Applies the float keyframe animation over 5s and makes it run infinitely.*/
+            /*  
+            animation-name: float;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-duration: 2s;
+            animation-delay: 5s;*/
+        }
+
+        /*
+            The following styles will add linear gradient background to the text then it will clip the text shape into the background.
+            The result is gradient text.
+        */
+        .ri-instagram-line{
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* This is the first item so no animation delay needed.*/
+        }
+
+        .ri-facebook-circle-line{
+            color: #1877f2;
+            animation-delay: 0.5s; /*Adds a animation delay of 1 seconds.*/
+        }
+
+        .ri-whatsapp-line{
+            color: #25d366;
+             animation-delay: 1s; /*Adds a animation delay of 2 seconds.*/
+        }
+
+        @keyframes float {
+            0%{
+                transform: translateY(0); /*The starting point of the animation is 0.*/
+            }
+            50%{
+                transform: translateY(-25px); /*The middle point of the animation is -15xp. This will move the element up.*/
+            }
+            100%{
+                transform: translateY(0); /*The last point of the animation is going back to the starting state of 0.*/
+            }
+        }
+
+        /*animaciones para campanita*/
+        /* ======================== */
+        .contenedor__campanita{
+           
+            display:flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .icon-wrapper{
+            width: 50px; /*Overall width - size of the icon*/
+            height: 50px; /*Overall height - size of the icon*/
+            position: relative; /*Position of relative because we will have an element inside with position of absolute. This prevents the element with position of absolute from floating away from this box.*/
+            background-color: rgba(255, 255, 255, 0.657); /*Background color of the box*/
+            
+        }
+        /* The ::after pseudo-element */
+        .icon-wrapper::after{
+            content: attr(data-number); /*Passing in the data attribute we added within the html. The number will show here.*/
+            width: 20px; /*Overall width - size of the bubble*/
+            height: 20px; /*Overall height - size of the bubble*/
+            background-color: #d32b2b;
+            color: #fff;
+            display: grid; /*Turns this element into a grid container. It will allow us to use the place content property to center the notification number.*/
+            place-content: center; /*Places the notification number in the middle of the bubble both vertically and horizontally.*/
+            border-radius: 50%; /*Makes the bubble round.*/
+            position: absolute; /*Allows us to move the element freely inside the icon wrapper box.*/
+            top: 5px; /*Positioning the bubble 5px from the top starting point.*/
+            right: 0; /*Positioning the bubble 5px from the right starting point.*/
+            opacity: 0; /*Hides the bubble from view.*/
+            transform: translateY(3px); /*Moves the bubble down slightly - used for the moving up animation later.*/
+        }
+        /*
+            Selecting the icon wrapper and applying the following effects to the pseudo-element when the icon-wrapper is hovered.
+            Note: In this real world you wouldn't do this effect on hover, but when the notification event is triggered based on the
+            language you are using to handle this. Example: JavaScript/Node and so on. I am using hover for demo purposes.
+        */
+        .icon-wrapper:hover::after{
+            opacity: 1; /*Shows the element again - We hide it by default.*/
+            transform: translateY(0); /*Moves the element up slightly - We move it down by default.*/
+            transition: opacity .25s, transform .25s; /*Adds a transition on the properties we want to animate over .25 seconds.*/
+        }
+        .bell-icon{
+            max-width: 100%; /*Makes the icon image only make up 100% of the icon wrapper width and no more than that.*/
+        }
+        .icon-wrapper:hover .bell-icon
+        {
+           
+            /*
+                Applies the shake keyframe animation to the bell icon when the icon wrapper is hovered.
+                Note: Again, you wouldn't do this on hover in the real world. This is for demo purposes.
+                The shake animation will last 1 second and the animation fill mode will be forwards. Forwards
+                means that the animation will stay on the last step of the keyframe once it ends (50% - rotate(0 degrees).
+            */
+            animation: shake 1s forwards; 
+        }
+        /*
+            Creating the keyframe animation. It will have 4 steps at 10% increments except for the last one
+            where it will be incremented by 20% to give it a slightly longer pause before it gets to the end.
+            The first step it will rotate by 15 degrees, then move back by setting the same value but as a negative
+            number, then again positive to make the bell move back to the starting position when initially hovered, and finally we give it a
+            neutral rotation of 0.
+        */
+        @keyframes shake {
+            10%{
+                transform: rotate(15deg);
+            }
+            20%{
+                transform: rotate(-15deg);
+            }
+            30%{
+                transform: rotate(15deg);
+            }
+            50%{
+                transform: rotate(0deg);
+            }
+        }
+        /* =========leer Más=============== */
+        .container__more{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .button{
+            text-decoration: none;
+            font-size: 20px;
+            color: #1fe8b6;
+            padding: 5px 10px;
+            border: 3px solid #1fe8b6;
+            position: relative;
+           
+            transform: translate(-50%, -50%);
+            margin: 20px;
+        }
+
+        .button::before,
+        .button::after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: inherit;
+            transition: all .5s ease-in;
+        }
+
+        .button::before{
+            top: -15px;
+            left: -15px;
+            border-width: 3px 0 0 3px;
+        }
+
+        .button::after{
+            bottom: -15px;
+            right: -15px;
+            border-width: 0 3px 3px 0;
+        }
+
+        .button:hover::before,
+        .button:hover::after{
+            width: calc(100% + 27px);
+            height: calc(100% + 27px);
+        }
+
+        /*animaciones para spinner*/
+
+        .container__spinner{
+            display:flex;
+            justify-content: center;
+            margin-top:30px;
+        }
+        
+        .spinner {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .spinner::before,
+        .spinner:after{
+            content: "";
+            position: absolute;
+            border-radius: inherit;
+        }
+        .spinner:before {
+            width: 100%;
+            height: 100%;
+            background-image:linear-gradient(
+                0deg, #ff00cc 0%,
+                #333399 100% );
+            animation: spin .5s infinite linear;
+        }
+        .spinner:after {
+            width: 85%;
+            height: 85%;
+            background-color: #151515;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+       <ul class="list">
+           <li>
+               <a href="#" class="link">Home</a>
+           </li>
+           <li>
+             <a href="#" class="link">Contact</a>
+            </li>
+            <li>
+                <a href="#" class="link">About Us</a>
+            </li>
+
+            <li>
+                <button class="btn-3" >Hover</button>
+            </li>
+           
+       </ul>
+       <div class="contenedor__campanita">
+            <div class="icon-wrapper" data-number="1">
+                <!-- Icon image. You could use font icons in a real world project (Remix icons, ion icons, font awesome, etc...) -->
+                <img src="./images/bell_icon.svg" alt="" class="bell-icon">
+            </div>
+       </div>
+      
+            <!-- This wrapper is not important and only used for demo purposes -->
+        <div class="icons-wrapper">
+            <!-- 
+                Font icons. They are being pulled by class names from the remix icon CDN stylesheet.
+                Visit https://remixicon.com for the full list of icons and documentation.
+                The last icon class is my personal class for selecting all icons at once.
+            -->
+            <i class="ri-instagram-line icon"></i>
+            <i class="ri-facebook-circle-line icon"></i>
+            <i class="ri-whatsapp-line icon"></i>
+        </div>
+
+        <div class="container__more">
+            <ul>
+                <li>
+                    <a href="#" class="button">Learn more</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="container__spinner">
+            <div class="spinner"></div>
+        </div>
+       
+
+        
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+.cont{
+    padding: 10% 0 3% 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cont_caja{
+    border: 1.2px rgb(74, 131, 255) solid;
+    text-align: center;
+    padding: 1% 1%;
+    margin: 0 0.2rem;
+}
+
+.cont_caja *{
+    margin: 10% 0;
+}
+
+.sectionForm{
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.sectionForm__h2{
+    font-size: 2rem;
+}
+
+.sectionForm__inputCorreo{
+    width: 91%;
+}
+
+.sectionForm__divTit{
+    padding: 0 5%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.sectionForm__pagar{
+    background-color: rgb(212, 232, 248);
+    margin: 0 4%;
+    padding: 0.4rem 1.3rem;
+    border-radius: 5px;
+    color: rgb(7, 93, 163);
+    text-align: left;
+}
+
+.sectionForm__botones{
+    margin: 1% 0 25%;
+}

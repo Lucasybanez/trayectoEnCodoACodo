@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT 2</title>
+    
+</head>
+
+<body>
+    <script>
+        /*
+       var producto;
+       console.log("producto");
+       console.log(producto);
+       producto = 20;
+       console.log(producto);
+
+       var producto_nuevo = "heladera";
+       console.log(producto_nuevo);
+       producto = "celular";
+       console.log(producto);
+       producto = "20 años tenia mi hermano cuando se fue a vivir a otro pais";
+       console.log(producto);
+       var miProducto = "heladera";
+       var miproducto ;
+
+       var miVariable = 2;
+       console.log("valor de mi variable");
+       console.log(typeof(miVariable));
+       var variableNueva = "hola mundo";
+       miVariable = variableNueva;
+       console.log(miVariable);
+      // console.log(mivariable);
+
+      // let numeroUno = "El nro de dni es :";
+      // let numeroDos = 39897564;
+
+        let numeroUno = "20";
+        let numeroDos = "10";
+
+       let suma = parseInt(numeroUno) + parseInt(numeroDos);
+       console.log(suma);
+
+       // clase 18 Lunes 17/10/22
+        let numeroDecimal = 12.4;
+        console.log(typeof(miVariable));
+
+     /*   let edad = parseInt(prompt("ingrese su edad"));
+        console.log("valor de edad");
+        console.log(typeof(edad));
+        console.log(edad);
+
+        numeroDecimal = parseInt(numeroDecimal);
+        console.log(numeroDecimal);
+
+        // 
+        let numeroFloat= "3.56";
+        console.log( parseFloat(numeroFloat) );
+
+        // 
+
+      /*  let edad = Number(prompt("ingrese su edad")); // si el usuario ingresa su edad de esta manera : 34 años , el resultado sera NaN
+        console.log("valor de edad");
+        console.log(typeof(edad));
+        console.log(edad);
+
+        // 
+        let myNumberValue = +true; // number 8
+        console.log(typeof(myNumberValue));
+        console.log(myNumberValue); 
+
+
+      /*  let edad = Number(prompt("ingrese su edad")); // si el usuario ingresa su edad de esta manera : 34 años , el resultado sera NaN
+        console.log(edad);
+        console.log(isNaN(edad));
+        if ( isNaN(edad) ) {
+            console.log("ingreso un valor incorrecto");
+            document.write("Se ingreso un valor Incorrecto");
+            edad = Number(prompt("ingrese su edad")); 
+        } else {
+            console.log("ingreso un valor correcto");
+            document.write("Se ingreso un valor Correcto");
+        }*/
+       /* console.log("valor de edad");
+      /*  console.log(typeof(edad));
+        console.log(edad);
+        if ( 2 === 3){
+            console.log("es verdadero");
+        }
+   
+
+        let nombre ='Pedro';
+
+        if ( nombre == 'pedro') {
+            console.log("es verdadero");
+
+        } 
+        else if (nombre =='Pedro') {
+            
+            console.log("entro al elseif"); 
+        } else{
+            console.log("entro al sino");
+        }
+
+        // clase 3 de js
+
+        //* operador ternario
+          //if (condicion){ bloque de codigo que ejecuta si se cumple la condicion}
+         // condicion ? codigo que se ejecuta : codigo que se ejecuta si no se cumple la condicion
+
+         let numero = 5;
+         let resultado = numero % 2 == 0 ? "par" : "impar";
+         console.log(resultado);
+
+        //* switch ejemplo para saber el dia de la semana
+       // let dia = Number(prompt("ingrese un dia de la semana en numeros del 1 al 7"));
+        //(dia = 1)
+        let dia = 1; 
+        switch (dia) {
+        case 1:
+          console.log("Lunes");
+          break;
+        case 2:
+            console.log("Martes");
+            break;
+        case 3:
+            console.log("Miercoles");
+            break;
+        case 4:
+            console.log("Jueves");
+            break;
+        case 5:
+            console.log("Viernes");
+            break;
+        case 6:
+            console.log("Sabado");
+            break;
+        case 7:
+            console.log("Domingo");
+            break;
+        case '1':
+            console.log("Lunes");
+            break;
+        default:
+            console.log("No es un dia de la semana");
+            break;
+        } 
+
+      
+
+        /*for (inicialización; condición; actualización) {
+        //sentencias a ejecutar en cada iteración
+        }*/
+        
+        //for (let i = 0; i < 10; i++ )
+
+        //*me muestra el valor de i del 0 al 9
+        /* for (let j = 9; j >= 0; j--) {
+           console.log("entra al for");
+           console.log(j);
+         }// cuando llega a esta parte del codigo, a la variable i se le suma 1 i++
+       //  console.log("valor de i" + i); */
+        /*
+        for (let i = 0; i < 10; i++) {
+            if (i === 5) {
+                console.log('Cinco');
+                continue;
+            }
+             console.log(i);
+        }   */
+       /* for (let i = 0; i < 10; i++) {
+            if (i === 5) {
+                console.log('Cinco');
+                break;
+            }
+            console.log(i);
+        } */
+
+        // while (condicion) { sentencias a ejecutar }
+       /* let evaluar = true ;
+        while(evaluar){
+            console.log("ejecuta el while");
+            if( dia == 1){
+                evaluar = false;
+            }
+        }*/
+       /* let x = 0;
+        while (x < 10) {
+            let nombreYdni = "Pedro - 36987456"
+            console.log(x);
+            x++;
+        } */
+       /* let color = "";
+        while (color != "rojo"){
+            color = prompt("dame un color (escribe rojo para salir)")
+        } */
+        /*let i = 0;
+        do {
+           console.log(i);
+           i++
+        } while (i < 10); 
+        //*tarea para el hogar hacer un do while para la logica del color rojo
+
+        let estudiantes = [];
+        const animales = [];
+
+        let animal = 'Perro';
+       /* const animalesNuevos = ['Perro', 'Gato', 'Pez', 'Conejo', 'Tortuga'];
+        const animalesViejos =['Leon', 'Pajaro', 'Oso', 'Burro', 'Cabra'];
+        let animalesNuevos = ['Perro', 'Gato', 'Pez', 'Conejo', 'Tortuga'];
+        let animalesViejos =['Leon', 'Pajaro', 'Oso', 'Burro', 'Cabra'];
+        /*animalesNuevos = animalesViejos;
+        console.log(animalesNuevos);
+        console.log(animalesViejos);
+        // lunes 24/10/2022
+        for (let i = 0; i < 10; i++) {
+            animales.push("animal" + i);
+        }
+        console.log(animales); 
+
+        
+        for (let i in animalesNuevos) {
+             console.log(animalesNuevos[i]);
+        }
+      
+
+        const personas =['Pedro','juan','Romina','Maria'];
+        
+        for (let nombre of personas) {
+            console.log(nombre);
+        }  */
+          // funciones
+        function saludar() {
+            console.log("Hola");
+        }
+
+       /* saludar();
+        saludar();
+        saludar();*/
+        function funcionSumaRetornaValor( a , b){
+           /* let sumaDentroFuncion ;
+            sumaDentroFuncion = a + b ;*/
+
+            return a + b;
+        }
+
+        let suma = funcionSumaRetornaValor(4 , 5);
+       // console.log(suma);
+       let anonima = function(a,b){ return a + b};
+       /*let a = 2;
+       let b = 3;
+       let anonima2 = a + b ;*/
+
+       suma = anonima(1,2);
+      // console.log(suma);
+/*
+       (function ( a , b) {
+            document.write("<br>")
+            document.write("<h1>ejecutando la funcion</h1>");
+            document.write("<br>")
+            document.write(a+b);
+        } )( 3, 4);*/
+
+/*
+        (function ( a , b) {
+            document.write("<br>")
+            document.write("<h1>ejecutando la funcion</h1>");
+            document.write("<br>")
+            document.write(a+b);
+        } )( 7, 3); */
+        
+        //document.write(typeof(funcionSumaRetornaValor));
+        const sumarFuncionTipoFlecha = (a=0,b=1) => a + b ;
+       /* const sumarYmultiplicar = (a,b) => a*2 + b*2 ;*/
+       
+       /* document.write("<br>")*/
+        const resultado = sumarFuncionTipoFlecha(4,5);
+       // console.log(resultado); 
+        //document.write( sumarFuncionTipoFlecha(5,5) );
+
+        function parametrosDefault( a = 0, b = 0 , c = 0 , d = true , i ="pepe"){
+         //  document.write(arguments[2]); // descomento para explicar como acceder a un valor que no tiene parametros
+
+           return a + b ;
+       }
+
+       let resultadoDos = parametrosDefault(1,2,3);
+       
+       function cambiarValor(a){
+           a = 20;
+           console.log(a);
+           console.log(x+5);
+
+      }
+       function cambiarNombre(nombre){
+           nombre = "Juan";
+           console.log(nombre);
+         
+       }
+
+       function cambiarNombreok (nombre){
+              nombre = "Juan";
+              return nombre ;
+       }
+
+       let nombreDos = "Pedro";
+       nombreDos = cambiarNombreok(nombreDos);
+
+
+       let x = 10 ; // valor primitivo no es un objeto
+       let nombrePersona = "Juann";
+       cambiarNombre(nombrePersona);
+      // console.log("despues de la funcion");
+      // console.log(nombrePersona);
+
+       // la variable no sufrio ningun cambio, eso es porque la variable x 
+       // le paso su valor a la variable a, pero x no cambia su valor
+      /* cambiarValor(x);
+       document.write(x);
+       document.write("<br>")*/
+
+       // objetos literales
+       const arrayPersona = ['Pedro', 'Medico', 30 ]; // 0 tenemos el nombre, en la posicion 1 tenemos el profesion y en la posicion 2 tenemos la edad
+       const persona = {
+            nombre: 'Juan',
+            profesion: 'Desarrollador Web',
+            edad: 40
+        }
+       //console.log(arrayPersona);
+       //console.log(persona);
+
+       const autos = ['BMW', 'Audi', 'Volvo'];
+       autos.push('Mercedes Benz');
+       console.log(autos);
+       console.log(autos.pop());
+      /*
+       if (autos.pop() ==='Volvo'){
+              console.log("es volvo");
+              autos.pop();
+       }*/
+       console.log(autos);
+        
+       /* let copiaAutos = autos.slice();
+        console.log(copiaAutos);
+        autos.pop();
+        console.log(autos);
+        console.log(copiaAutos);
+
+        copiaAutos = autos;
+        console.log(copiaAutos);
+        autos.pop();
+        console.log(copiaAutos);*/
+
+        // array de objetos literales
+
+        const carrito = [
+            { nombre: 'Monitor 27 Pulgadas', precio: 500 },
+            { nombre: 'Televisión', precio: 100 },
+            { nombre: 'Tablet', precio: 200 },
+            { nombre: 'Audifonos', precio: 300 },
+            { nombre: 'Teclado', precio: 400 },
+            { nombre: 'Celular', precio: 700 },
+        ]
+        carrito.forEach(element => {
+          // console.log(element.nombre); 
+           // console.log(element.precio); 
+        });
+
+        for (let i = 0; i < carrito.length; i++) {
+             console.log(`${carrito[i].nombre} - Precio: ${carrito[i].precio}`);
+            }
+
+            carrito.forEach(function(producto) {
+                console.log(`${producto.nombre} - Precio: ${producto.precio}`);
+            });
+            // CAMBIAR LA FUNCION ANONIMA DE LA LINEA ANTERIOR POR UNA FUNCION TIPO FLECHA
+
+            const nuevoArreglo = carrito.map(function(producto) {
+                // APLIQUE 10% DE DESCUENTO Y LUEGO RETORNAR EL NUEVO PRECIO CON DESCUENTO AL NUEVO ARRAY 
+             return `${producto.nombre} - Precio: ${producto.precio}`;
+            }); 
+
+            const nuevoCarrito= carrito.map(producto => {     
+            return {
+                ...producto, // todos los datos del estudiantes copiados
+                precio : 1000,
+                sucursal: 1,
+                descuento : 10
+                // aca puedo tamnbien alterar los datos del objeto
+            }
+           });
+           console.log(nuevoCarrito);
+    </script>
+</body>
+</html>

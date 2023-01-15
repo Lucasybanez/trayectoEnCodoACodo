@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>proyecto html</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .header__flex{
+                background-color:grey;
+                display: flex;
+                justify-content:center;
+
+            }
+            .logo{
+                display:flex;
+                align-items: center;
+               
+                width:50%;
+                padding-left:2rem;
+            }
+            .img__logo{
+                width:20%;
+              
+            }
+            .navegador{
+               
+                padding-right: 2.5rem;
+                width:50%;
+                display: flex;
+                align-items: center;
+                justify-content:space-between;
+            }
+            .link{
+                text-decoration: none;
+                color: white;
+                font-size: 1rem;
+            }
+            .imagenMain{
+                width:100%;
+            }
+            /*pantalla divida*/
+            .sectionDividida{
+                display: flex;
+                height:70vh;
+            }
+            .imagenIzq{
+                height:100%;
+                width:50%;
+                background-image: url("./assets/imagenes/honolulu.jpg");
+                background-size: cover;
+            }
+            .contenidoDer{
+                height:100%;
+                width:50%;
+                padding:2rem ;
+                background-color: #343333;
+                color:white;
+                font-size: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .sectionTarjetas{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .padreTarjetas{
+                width:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .tarjetas__flex{
+                width:80%;
+                display:flex;
+               
+                justify-content:space-between;
+               
+            }
+            .tarjeta{
+                background-color: white;
+                width: 30%;
+                border:1px solid rgb(214, 214, 214);
+                border-radius: 10px;
+            }
+            .tarjetaImagen{
+                width: 100%;
+                border-radius: 10px;
+            }
+            .tarjetaContenido{
+                padding:1rem;
+            }
+            .tarjetaParrafo{
+                width:80%;
+            }
+            .sectionPrincipal{
+                background-image: linear-gradient(to right,rgb(0 0 0 /.5),rgb(0 0 0 /.5)), url("./assets/imagenes/ba1.jpg");
+                height:100vh;
+                width: 100%;
+                display: flex;
+                justify-content:flex-end;
+                align-items:center;
+            }
+            .contenidoPrincipal{
+                width: 60%;
+                text-align: right;
+                color:white;
+            }
+
+            /*celular*/
+            @media screen and (max-width:768px){
+              .header__flex{
+                flex-direction: column;
+                
+             }
+             .logo{
+                width:100%;
+                justify-content:space-between;
+                padding-right:2rem;
+                margin-bottom: 0.5rem;
+             }
+             .navegador{
+                width:100%;
+                flex-direction: column;
+                padding-right: initial;
+             }   
+             .link{
+                border-bottom: 1px solid rgb(57, 57, 57);
+                display:inline-block;
+                width:100%;
+                text-align: center;
+                padding-top:0.6rem;
+                padding-bottom:0.6rem;
+                font-size: 1.2rem;
+             }
+             /*imagen principal*/
+             .sectionPrincipal{
+                height: 60vh;
+                justify-content:center;
+             }
+             .parrafoPrincipal{
+                line-height:1.5rem;
+                text-align: center;
+             }
+
+             /*tarjetas*/
+             .tarjetas__flex{
+                flex-direction: column;
+                align-items: center;
+             }
+             .tarjeta{
+                width:90%;
+                margin-bottom: 1rem;
+                box-shadow: -7px -7px 50px 6px rgba(0,0,0,0.54);
+                            -webkit-box-shadow: -7px -7px 50px 6px rgba(0,0,0,0.54);
+                            -moz-box-shadow: -7px -7px 50px 6px rgba(0,0,0,0.54);
+             }
+             .tituloTarjetas{
+                margin-bottom:1rem;
+             }
+
+            }
+            /*tablet*/
+            @media screen and (min-width:769px) and (max-width:1024px){
+                .header__flex{
+                    height: 5rem;
+                  
+                }
+                .logo{
+                    width:30%;
+                }
+                .navegador{
+                    width:70%;
+                    padding:0;
+                    justify-content:space-between;
+                }
+
+            }
+
+            /*tamaño destock*/
+            @media screen and (min-width:1025px){
+
+            }
+        </style>
+    </head>
+     
+    <body>
+        <header class="header__flex">
+            <div class="logo">
+                <img class="img__logo" src="./assets/imagenes/codoacodo.png" alt="Logo de codo a codo" loading="lazy">
+                <h2>Conf.Bs.As.</h2>
+            </div>
+          
+            <nav class="navegador">
+                <a  class="link" href="#">La Conferencia </a>
+                <a  class="link" href="./pages/los_oradores.html">Los oradores</a>
+                <a  class="link" href="./pages/lugaryfecha.html">El lugar y la Fecha</a>
+                <a  class="link" href="./pages/contacto.html">Conviértete en Orador</a>
+                <a  class="link" href="./pages/comprartickets.html">Comprar Tickets</a>
+            </nav>
+        </header>
+        <main>
+            <section class="sectionPrincipal">
+                <div class="contenidoPrincipal">
+                    <h1>Conferencia Bs.As.</h1>
+                    <p class="parrafoPrincipal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque facilis eaque provident sed id, deserunt quos ab autem blanditiis numquam quia laborum culpa expedita! Sed, molestiae vitae? Sed, veritatis doloremque.</p>
+                    <a href="./pages/contacto.html">Quiero ser orador</a>
+                    <a href="./pages/comprartickets.html">Comprar Tickets</a>
+                </div>
+               
+            </section>
+        
+        </main>
+        <section class="sectionTarjetas">
+            <div class="tituloTarjetas">
+                <h2>CONOCE</h2>
+                <h3>a los oradores</h3>
+            </div>
+            <div class="padreTarjetas">
+                <div  class="tarjetas__flex">
+                    <div  class="tarjeta">
+                        <!--es una etiqueta contenedora y es una etiqueta comodin en bloque  height="400"-->
+                        <img class="tarjetaImagen" src="./assets/imagenes/steve.jpg" alt="imagen card" loading="lazy" width="300" >
+                        <div class="tarjetaContenido">
+                            <h3>Steve Jobs</h3>
+                            <div class="tarjetaParrafo">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ut dicta adipisci reiciendis at. Molestiae nobis eveniet provident qui, eligendi voluptatibus <br> alias voluptatum dolores, excepturi ipsum mollitia aspernatur consequatur maiores placeat.</p>
+                            </div>
+                          
+                            <a href="">leer Más</a>
+                        </div>
+                       
+                    </div>
+                    
+                    <div class="tarjeta">
+                        <!--es una etiqueta contenedora y es una etiqueta comodin en bloque-->
+                        <img  class="tarjetaImagen" src="./assets/imagenes/bill.jpg" alt="imagen card" loading="lazy" width="300">
+                        <div class="tarjetaContenido">
+                            <h3>Steve Jobs</h3>
+                            <div class="tarjetaParrafo">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ut dicta adipisci reiciendis at. Molestiae nobis eveniet provident qui, eligendi voluptatibus <br> alias voluptatum dolores, excepturi ipsum mollitia aspernatur consequatur maiores placeat.</p>
+                            </div>
+                          
+                            <a href="">leer Más</a>
+                        </div>
+                    </div>
+                  
+                    <div class="tarjeta">
+                        <!--es una etiqueta contenedora y es una etiqueta comodin en bloque-->
+                        <img  class="tarjetaImagen" src="./assets/imagenes/ada.jpeg" alt="imagen card" loading="lazy" width="300">
+                        <div class="tarjetaContenido">
+                            <h3>Steve Jobs</h3>
+                            <div class="tarjetaParrafo">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ut dicta adipisci reiciendis at. Molestiae nobis eveniet provident qui, eligendi voluptatibus <br> alias voluptatum dolores, excepturi ipsum mollitia aspernatur consequatur maiores placeat.</p>
+                            </div>
+                          
+                            <a href="">leer Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+           
+        </section>
+        <section class="sectionDividida">
+            <div class="imagenIzq">
+
+            </div>
+            
+            <div class="contenidoDer">
+                <h3>Bs.As. Octubre</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea facere quos quia porro enim obcaecati dolore amet debitis, nihil possimus iusto alias! Nisi quasi, unde aspernatur debitis natus inventore blanditiis.</p>
+                <a href="">Conoce Más</a>
+
+            </div>
+        </section>
+        <br><br>
+       <section>
+        <!-- Clase del miercoles, formulario (Ver enlaces internos!!!!)-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Orador</th>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Steve Jobs</td>
+                    <td>Lun. Y Mie.</td>
+                    <td>18:30hs a 20:00hs</td>
+                </tr>
+                <tr>
+                    <td>Bill Gates</td>
+                    <td>Mart. Y Juev.</td>
+                    <td>18:30hs a 20:00hs</td>
+                </tr>
+                <tr>
+                    <td>Ada Lovelace</td>
+                    <td>Lun. Y Mie.</td>
+                    <td>10:00hs a 11:30hs</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"> <a href="">Sacar Entradas</a> </td>
+                </tr>
+            </tfoot>
+           
+           
+        </table>
+       </section>
+       <br><br>
+       <section>
+         <form action="">
+            <div>
+                <input type="text" placeholder="Nombre" >
+                <input type="text" placeholder="Apellido">
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="email">
+            </div>
+            <div>
+                <label for="">Ingrese Contraseña</label>
+                <input type="password" required>
+            </div>
+           
+            <div>
+              <textarea name="" id="" cols="50" rows="10" placeholder="Sobre qué quieres hablar?"></textarea>
+            </div>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+             <div>
+                <p>indique su provincia</p>
+                <br>
+                <select >
+                    <option value="">Salta</option>
+                    <option value="">Entre Rios</option>
+                    <option value="">Santa Fe</option>
+                    <option value="">Rio Negro</option>
+                    <option value="">Cordoba</option>
+                </select>
+             </div>
+              <div>
+               <p>Terminos y Condiciones</p> 
+               <input type="checkbox" name="terminos">
+              </div>
+             <br>
+             <div>
+                <input type="submit" value="Enviar Formulario">
+                <input type="reset" value="Limpiar">
+             </div>
+           
+
+
+         </form>
+       </section>
+       <br>
+      
+       <footer>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+       </footer>
+       
+    </body>
+</html>

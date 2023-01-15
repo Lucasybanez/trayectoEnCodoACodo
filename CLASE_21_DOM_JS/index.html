@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 23</title>
+</head>
+<!--evento onload del body, llamamos a la ventana y usamos una alert
+este evento se pisa porque en el script le asignamos otra funcion y como lo ultimo que se carga es el script que esta al final del body, queda esa funcion
+
+<body onload="window.alert('Bienvenido a mi página!');">
+
+-->
+<body id="cuerpo">
+    <form action="">
+        <input id="nombre" type="text" name="nombre" placeholder="nombre" value="Gisele">
+        <input id="apellido" type="text" name="apellido" placeholder="apellido">
+        <input type="submit" value="enviar">
+        <button id="saludar"> Saludar</button>
+        
+    </form>
+    <div>
+        <button id="cambiar">Cambiar background-color</button>
+    </div>
+    <div>
+        <!--
+            Puede encontrar equivalentes de atributos HTML para muchas de las propiedades del controlador de eventos(addeventlistener,a este metodo le pasamos una funcion como segundo parametro, y el primer parametro el evento); sin embargo, no debe usarlos, ya que se consideran malas prácticas. Puede parecer fácil usar un atributo de controlador de eventos si está haciendo algo realmente rápido, pero rápidamente se vuelven inmanejables e ineficientes.
+
+            Para empezar, no es una buena idea mezclar su HTML y su JavaScript, ya que se vuelve difícil de leer. Mantener su JavaScript separado es una buena práctica, y si está en un archivo separado, puede aplicarlo a varios documentos HTML.
+
+            Incluso en un solo archivo, los controladores de eventos en línea no son una buena idea. Un botón está bien, pero ¿y si tuvieras 100 botones? Tendría que agregar 100 atributos al archivo; rápidamente se convertiría en una pesadilla de mantenimiento. Con JavaScript, puede agregar fácilmente una función de controlador de eventos a todos los botones de la página sin importar cuántos haya
+
+        -->
+        <button onclick="changeBackground()">Press me</button>
+    </div>
+    
+   <script >
+
+     /*  ¿Qué es el DOM?
+        El modelo de objeto de documento (DOM) es una interfaz de programación para los documentos HTML y XML. Facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido. El DOM da una representación del documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos. Esencialmente, conecta las páginas web a scripts o lenguajes de programación.
+
+        Una página web es un documento. Éste documento puede exhibirse en la ventana de un navegador o también como código fuente HTML. Pero, en los dos casos, es el mismo documento. El modelo de objeto de documento (DOM) proporciona otras formas de presentar, guardar y manipular este mismo documento. El DOM es una representación completamente orientada al objeto de la página web y puede ser modificado con un lenguaje de script como JavaScript.
+
+        Todas las propiedades, métodos y eventos disponibles para la manipulación y la creación de páginas web está organizado dentro de objetos. Un ejemplo: el objeto document representa al documento mismo, el objeto table hace funcionar la interfaz especial HTMLTableElement del DOM para acceder a tablas HTML, y así sucesivamente. Ésta documentación procura una relación objeto-por-objeto del DOM que funciona con los navegadores basados en Gecko.
+
+        importante:!!  El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.
+
+        Las siglas DOM significan Document Object Model, o lo que es lo mismo, estructura del documento HTML. Una pagina HTML esta formada por multiples etiquetas de HTML, aninadas una dentro de otra, formando un arbol de elementos. El DOM es una representación de esta estructura.
+        En javascript, el DOM es una representación de esta estructura la cual se puede modificar, añadiendo nuevas etiquetas, modificando las existentes, agregando clases, id, atributos, cambiando el contenido de un texto, etc. 
+        Estas acciones se pueden realizar con una serie de métodos y propiedades, incluso indicando que se realicen cuando el usuario realiza determinada accion, ejemplo click a un boton, mover el raton, escribir un texto, etc.
+
+       
+        ¿Cómo se accede al DOM?
+        En javascript la forma de acceder al DOM es a traves de un objeto llamado  Este objeto es el que representa el documento HTML, en su interior se encuentran todos los elementos HTML, que seran Element o Node. 
+
+        Element: no es mas que la representacion generica de una etiqueta de HTML, es decir, una etiqueta que se puede agregar a un documento HTML.
+
+        Node: Es una unidad basica, la cual puede ser un element o nodo de texto.
+
+        document y window son objetos cuya interfaces son generalmente muy usadas en la programación de DOM. En término simple, el objeto window representa algo como podría ser el navegador, y el objeto document es la raíz del documento en sí. Element hereda de la interfaz genérica Node, y juntos, estas dos interfaces proporcionan muchos métodos y propiedades utilizables sobre los elementos individuales. Éstos elementos pueden igualmente tener interfaces específicas según el tipo de datos representados, como es el caso del objeto table. 
+
+        document.getElementById(id)
+        element.getElementsByTagName(name)
+        document.createElement(name)
+        parentNode.appendChild(node)
+        element.innerHTML
+        element.style.left
+        element.setAttribute
+        element.element.getAttribute
+        element.addEventListener
+        window.content
+        window.onload
+        window.dump
+        window.scrollTo
+        
+        */
+
+        //document: cuando un miembro devuelve un objeto del tipo document, este objeto es la raiz del objeto documento en si mismo DOM
+        //element: se refiere a un elemento o a un nodo del DOM (el método document.createElement() devuelve un objeto referido a un nodo, lo que significa que este método devuelve el elemento que acaba de ser creado en el DOM. Los objetos element ponen en funcionamiento a la interfaz Element del DOM y también a la interfaz de nodo "Node" más básica, las cuales son incluidas en esta referencia.)
+        //nodelist: una lista de nodos, es una serie de elementos, parecido a lo que devuelve el metodo document.getElementsByTagName()
+        //getElementById: devuelve un objeto del tipo elemento(etiqueta de html )
+        //value: devuelve el valor del elemento
+        //innerHTML: devuelve el contenido del elemento
+        //innerText: devuelve el contenido del elemento
+        //atribute: los atributos son nodos en el dom igual que los elementos, pero no suelen usarse asi.
+        //namedNodeMap: es una lista de atributos, es una serie de nodos
+       
+        //setAttribute: establece un atributo de un elemento
+        //getAttribute: devuelve el valor de un atributo de un elemento
+        //removeAttribute: elimina un atributo de un elemento
+        //addEventListener: agrega un evento a un elemento
+        //removeEventListener: elimina un evento de un elemento
+        //event: objeto que contiene informacion del evento
+        //preventDefault: evita que el evento se propague
+        //target: objeto que contiene informacion del elemento que genero el evento
+        //getElementsByTagName(): devuelve una lista de elementos que cumplen con el nombre del tag
+
+        /*Los eventos son acciones u ocurrencias que suceden en el sistema que está programando, que el sistema le informa para que su código pueda reaccionar ante ellos.
+
+        Por ejemplo, si el usuario hace clic en un botón en una página web, es posible que desee reaccionar a esa acción mostrando un cuadro de información. En este artículo, discutimos algunos conceptos importantes relacionados con los eventos y observamos cómo funcionan en los navegadores.
+        El sistema produce (o "dispara") una señal de algún tipo cuando ocurre un evento y proporciona un mecanismo mediante el cual se puede realizar una acción automáticamente ( es decir, algún código en ejecución) cuando ocurre el evento.
+        En el caso de la Web, los eventos se activan dentro de la ventana del navegador y tienden a adjuntarse a un elemento específico que reside en él. Puede ser un solo elemento, un conjunto de elementos, el documento HTML cargado en la pestaña actual o toda la ventana del navegador. Hay muchos tipos diferentes de eventos que pueden ocurrir.
+
+        Por ejemplo:
+
+        El usuario selecciona, hace clic o pasa el cursor sobre un determinado elemento.
+        El usuario elige una tecla en el teclado.
+        El usuario cambia el tamaño o cierra la ventana del navegador.
+        Una página web termina de cargarse.
+        Se envía un formulario.
+        Un video se reproduce, pausa o finaliza.
+        Se produce un error.
+
+        Para reaccionar a un evento, le adjuntas un controlador de eventos. Este es un bloque de código (generalmente una función de JavaScript que usted crea como programador) que se ejecuta cuando se activa el evento. Cuando dicho bloque de código se define para ejecutarse en respuesta a un evento, decimos que estamos registrando un controlador de eventos 
+
+        algunos eventos:
+            onblur un elemento pierde el foco
+            onchange un elemento ha sido modificado 
+            onclick pulsar y soltar raton
+            onfocus elemento obtiene el foco
+            keydown pulsar una tecla y no soltar
+            keypress pulsar una tecla
+            keyup soltar una tecla pulsada
+            load pagina cargada completamente
+            mousedown pulsar raton y no soltarlo
+            mousemove mover el raton
+            mouseout el raton sale del elemento 
+            mouseover el raton entra al elemento
+            mouseup solar el boton de raton
+            reset
+            resize modificar el tamaño de la pantalla
+            select seleccionar un texto
+            submit enviar el formulario 
+            unload se abandona la pagina al cerrar el navegador
+        
+        */
+
+
+       /*
+        // ejecuta esta función cuando se cargue el documento
+        window.onload = function() {
+
+            // crea dinámicamente un par de elementos HTML en una página vacia
+            var heading = document.createElement("h1");
+            var heading_text = document.createTextNode("Estamos manejando el DOM");
+            // al h1 le agregamos el texto
+            heading.appendChild(heading_text);
+            // agregamos el h1 al body
+            document.body.appendChild(heading);
+        }*/
+
+        // levanto en variables cada uno de los elementos del formulario y los botones
+         let nombre = document.getElementById('nombre');
+         console.log(nombre);
+         let apellido = document.getElementById('apellido');
+         console.log(apellido);
+         let saludar = document.getElementById('saludar');
+         console.log(saludar);
+         let cambiar = document.getElementById('cambiar');
+         let cuerpo = document.getElementById('cuerpo');
+         console.log(nombre.value);
+
+         // al elemento saludar, en el evento click, ejecuta una funcion anonima que muesstra u alert
+         saludar.addEventListener('click', function(){
+              console.log(nombre.value);
+              alert('Hola ' + nombre.value + ' ' + apellido.value);
+         });
+         // creo una funcion que duelve un nro aleatorio
+        function random(number) {
+            return Math.floor(Math.random() * (number+1));
+        }
+        // funcion que cambia el color del body 
+        function changeBackground() {
+          
+          let rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+          //
+          cuerpo.style.backgroundColor = rndCol;
+        }
+
+        // al elemento boton,le indico que en el click, ejecute la funcion que se llama changeBackground
+         cambiar.addEventListener('click', changeBackground);
+   </script>
+</body>
+</html>

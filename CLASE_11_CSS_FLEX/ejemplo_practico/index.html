@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container__flex{
+            background-color:aqua;
+            border: 2px solid black;
+           /* padding: 10px;*/
+           
+            height:80vh;
+            display:flex;
+            flex-direction: row;/*valor por defecto solo al usar display:flex*/
+            flex-wrap: nowrap;/*valor por defecto solo al usar display:flex*/
+            flex-wrap: wrap;
+            flex-flow: column nowrap;
+            flex-direction:column-reverse;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+            /*si quiere centrar en los dos ejes, utilizo siempre las dos propiedades combinadas*/
+            justify-content:center;/*cuando es una row centra en el eje horizontal, pero cuando el contenedor es una column, centra en el eje vertical*/
+            justify-content:space-around;
+            justify-content:space-between;
+            justify-content:space-evenly;
+            justify-content:flex-end;
+            justify-content:flex-start;/*este es el valor por defecto de un contenedor flexible*/
+            justify-content:center;
+            justify-content:space-evenly;
+
+            align-items:center;/* cuando el contenedor es una row centra en el eje vertical, pero cuando es una column, centra en el eje horizontal*/
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: stretch;/*valor por defecto cuando es una fila*/
+            align-items:center;
+
+            justify-content:center;
+            align-items:center;
+            /*estas propiedades solo tienen efecto cuando tengo la propiedad flex-wrap : wrap, y tengo más de una linea de hijos dentro del contenedor, sea en fila o en columna*/
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-between;
+            align-content: space-around;
+            align-content: stretch;/*valor por defecto*/
+           /* justify-content: flex-end;
+            align-items: center;
+            justify-content:center;
+            align-content: center;
+            
+           /* 
+           justify-content: center;*/
+
+           
+           /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;*/
+           
+            /*
+            justify-content: center;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-between;
+            justify-content: space-around;
+
+            height: 400px;
+
+            align-items: center;
+            align-items: baseline;
+            align-items: stretch; 
+            align-items: flex-start;
+
+            align-content: center;
+            align-content: flex-start;
+            align-content: space-around;
+            align-content:stretch;
+            align-content: space-between;
+            align-content:flex-end; */
+
+           
+        }
+
+        .container__flex__box{
+            width:200px;
+           
+            background-color:rgb(229, 232, 163);
+            border: 2px solid black;
+            text-align: center;
+            font-size: 7rem;
+           /* margin:10px;*/
+           /* border-radius: 50%;*/
+
+            /*propiedad order :1 
+            flex-grow : 2  -- ocupa mas espacio que el resto */
+           /* flex-shrink: 0; -- hasta cuando se puede escoger un elemento*/
+            /*flex-basis: 100px; -- el tamaño del elemento*/
+           /* flex : 0 0 200; abrevia las tres propiedades */
+        }
+        .alto{
+            height:200px;
+        }
+        .flex__hijo{
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: stretch;
+             
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container__flex"> 
+        <div class="container__flex__box  alto">
+            1
+        </div>
+        <div class="container__flex__box alto">
+            2
+        </div>
+        
+        <div class="container__flex__box alto">
+           3
+        </div>
+      
+        <div class="container__flex__box flex__hijo">
+            4
+        </div>
+        <div class="container__flex__box alto">
+            5
+        </div>
+      
+        <div class="container__flex__box alto">
+            6
+        </div>
+        <div class="container__flex__box alto">
+            7
+        </div>
+        <div class="container__flex__box alto">
+            8
+        </div>
+        <div class="container__flex__box alto">
+            9
+        </div>
+     
+        <div class="container__flex__box alto">
+            10
+        </div>
+        <div class="container__flex__box alto">
+            11
+        </div>
+        <div class="container__flex__box alto">
+            12
+        </div>
+       
+
+    </div>
+    
+</body>
+</html>

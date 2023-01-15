@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Modeling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;500;700&display=swap');
+
+        *{
+            box-sizing: border-box;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(186, 68, 25);
+            color: rgb(8, 24, 88);
+            background-image: linear-gradient(to top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+           
+            padding:50px;
+            padding-left: 100px;
+            padding: 10px 20px 30px 40px;
+            margin: 100px;
+            border: 10px solid rgb(15, 15, 15);
+           /*faltan sombras a la caja y bordes redondeados*/
+
+        }
+        .link{
+            color: white;
+            text-decoration: none;
+        }
+        .lista{
+            list-style-type: none;
+        }
+        .contenedorParrafo{
+            background-color:#d16ba5;
+            width:800px;
+            height:100px;
+            overflow: auto;
+        }
+        .parrafo{
+            font-style:italic;
+            font-weight:bold;
+            font-size:20px;
+            font-family: 'Montserrat', sans-serif;
+            text-align:center;
+            line-height:1.6;
+           
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p> Esto es una caja </p>
+        <a class="link" href="">Ver Más</a>
+    </div>
+    <div>
+        <ol class="lista">
+            <li>paso1</li>
+            <li>paso 2</li>
+            <li>paso 3</li>
+            <li>paso 4</li>
+            <li>paso 5</li>
+        </ol>
+        <br>
+        <ul class="lista">
+            <li>paso1</li>
+            <li>paso 2</li>
+            <li>paso 3</li>
+            <li>paso 4</li>
+            <li>paso 5</li>
+        </ul>
+    </div>
+    <div class="contenedorParrafo">
+        <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto vel quibusdam maxime autem nulla quam quaerat perferendis et. Debitis voluptates facilis fugit maiores nam nulla dicta maxime. Sint, modi quod?
+        Aperiam necessitatibus minus labore cupiditate iure. Commodi nam omnis temporibus, ipsum quidem sapiente alias distinctio deleniti quaerat ratione! Enim sint maxime eveniet quas cum doloribus quo ex provident, vero itaque.
+        Voluptatem blanditiis, a commodi unde vel tenetur. Odit temporibus odio, doloremque ipsum exercitationem laudantium et recusandae pariatur cum officiis distinctio tempora quibusdam cupiditate error alias placeat, consectetur omnis aperiam ducimus?
+        Ipsum modi qui, saepe impedit asperiores doloribus odio magnam in a error eum ad, iste maxime dignissimos. Ratione, alias? Cumque odit consectetur at suscipit animi debitis nesciunt maxime ullam blanditiis.
+        Aliquam repellendus pariatur dolor numquam fugit sit cum quaerat expedita repellat ullam ad, libero illum laudantium et, nemo beatae reiciendis est suscipit debitis alias rerum saepe iusto non accusamus. Nam! </p>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+</body>
+</html>

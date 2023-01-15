@@ -1,0 +1,19 @@
+header .bgGris{
+    background-color: rgb(53,58,64);
+}
+
+header div{
+    background-color: rgb(42, 121, 218);
+}
+
+.contenedorHeader .bgGris{
+    background-color: rgb(170, 172, 175);
+}
+
+#idBody{
+    background-color:rgb(202, 158, 122);
+}
+
+.bgRosa{
+    background-color:rgb(247, 88, 247);
+}

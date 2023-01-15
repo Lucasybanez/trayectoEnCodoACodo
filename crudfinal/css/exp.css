@@ -1,0 +1,45 @@
+.exp{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.exp_contenedor{
+    margin: 5% 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.exp_contenedor_caja1{
+    width: 50%;
+    margin-right: 2%;
+}
+
+.exp_contenedor_caja2{
+    width: 50%;
+}
+
+.exp_contenedor_caja2_tag{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.exp_contenedor_caja2_button1{
+
+    background-color: rgba(255, 0, 0, 0);
+    padding: 2%;    
+    color: #2A7AE4;
+    border: 1px solid #2A7AE4;
+    text-decoration: none;
+    
+}
+
+.exp_contenedor_caja2_button2{
+
+    background-color: #2A7AE4;
+    padding: 2%;    
+    color: white;
+    border: 1px solid #2A7AE4;
+    text-decoration: none;
+    
+}

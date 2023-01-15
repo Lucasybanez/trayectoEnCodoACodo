@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repaso de formulario</title>
+</head>
+<body>
+    <main>
+
+        <div>
+
+            <form action="verificar.html">
+
+               <fieldset>
+                   <legend>Datos</legend>
+                   <div>
+                        <label for="nombre">Ingrese su Nombre</label>
+                        <input name="nombre" id="nombre" type="text" placeholder="su nombre"  minlength="3" maxlength="50" required>
+                   </div>
+                   
+                   <div>
+                    <label for="nac" >Ingrese su Fecha de Nac.</label>
+                    <input id="nac" type="date"  autofocus  required>
+                    <label for="horanac">hora de nac</label>
+                    <input id="horanac" type="time">
+                   </div>
+
+                   <input type="text" value="este contenido no se modifica" readonly>
+                   <br>
+
+                   <input type="text" value="este no se envia" disabled>
+
+                   <select name="provincia" id="prov" required> 
+                    <option value="" >seleccione una opcion</option>
+                    <option value="Caba">Capital Federal</option>
+                    <option value="Buenos Aires" >Bs. As.</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco" selected>Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Entre Rios" >Entre Rios</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Sgo. del Estero">Sgo. del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucuman</option>
+                </select>
+
+                <div>
+                    <label for="mascotas">Seleccione su/s Mascota/s</label>
+                    <!--el atributo multiple nos deja seleccionar varios items-->
+                    <select name="mascotas" id="mascotas" multiple>
+                        <!--agrupamos las selecciones con la etiqueta optgroup
+                        el atributo label sirve para poner el nombre del agrupador-->
+                        <optgroup label="4 patas">
+                            <option value="perro" >Perro</option>
+                            <option value="gato" selected>Gato</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="conejo">Conejo</option>
+                        </optgroup>
+                        <optgroup label="pajaros">
+                            <option value="loro">Loro</option>
+                            <option value="canario">Canario</option>
+                        </optgroup>
+                        <optgroup label="otras">
+                            <option value="serpiente">Serpiente</option>
+                            <option value="tarantula">Tarántula</option>
+                            <option value="pez">pez</option>
+                        </optgroup>
+                    
+                    </select>
+
+                </div>
+
+                <div>
+                    <label for="color">Seleccione un Color</label>
+                    <input id="color" type="color">
+                </div>
+                <div>
+                   
+                    <label for="html">Javascript
+                        <input id="html" name="lenguajes" type="checkbox" value="html" checked >
+                    </label>
+
+                  
+                    <label for="php">PHP
+                        <input id="php" name="lenguajes" type="checkbox" value="php" checked >
+                    </label>
+                    <label for="c">C
+                        <input id="c" name="lenguajes" type="checkbox" value="c" >
+                    </label>
+                    <label for="c#">C#
+                        <input id="c#" name="lenguajes" type="checkbox" value="c#" >
+                    </label>
+                    <label for="java">Java
+                        <input id="java" name="lenguajes" type="checkbox" value="java" >
+                    </label>
+                    <label for="python">Python
+                        <input id="python" name="lenguajes" type="checkbox" value="python" >
+                    </label>
+                </div>
+
+                <fieldset>
+                    <legend>¿Que lenguaje prefiere ?</legend>
+                    <label for="python_1">Python
+                        <input id="python_1" name="un_leng" type="radio" value="Python" required>
+                    </label>
+                    <label for="php_1">PHP
+                        <input id="php_1" name="un_leng" type="radio" value="php"  required>
+                    </label>
+                   
+                    <div>
+                        <label for="edad">Indique su Edad</label>
+                        <input id="edad" name="edad" type="number" min=1 max=100 required>
+                        
+                    </div> 
+
+                    <div>
+                        <input id="enviar" type="submit" value="Enviar">
+                        <input id="reset" type="reset" value="Limpiar">
+                    </div>
+
+            </form>
+        </div>
+
+
+
+    </main>
+    
+</body>
+</html>

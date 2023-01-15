@@ -1,0 +1,108 @@
+@media (max-width:768px){
+    .nave_caja2{
+        display: none;
+    }
+
+    .prese{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    
+
+    .prese_caja1{
+        width: 100%;
+    }
+
+    .prese_caja1_p1{
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    .prese_caja1_redes{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .prese_caja2{
+        width: 30%;
+        margin-bottom: 3%;
+    }
+
+    .nave_caja2_a{
+        display: flex;
+        align-items: center;
+    }
+
+    .nave_caja2_a img{
+        margin:0 2px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .sobre{
+        padding: 10% 10%;
+    }
+
+    .skills_contenedor{
+        flex-wrap: wrap;
+    }
+
+    .skills_caja{
+        width: 40%;
+        margin-bottom: 4%;
+        height: auto;
+        padding-top: 10%;
+        padding-bottom: 4%;
+    }
+
+    .formac_contenedor{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .exp_contenedor{
+        flex-direction: column;
+        margin: 30% 0;
+    }
+
+    .exp_contenedor_caja1{
+        width: 100%;
+    }
+
+    .exp_contenedor_caja2{
+        width: 100%;
+    }
+
+    .exp_contenedor_caja2_button1{
+        padding: 3%;
+    }
+
+    .exp_contenedor_caja2_button2{
+        padding: 3%;
+    }
+
+    .contacto_caja1{
+        display: none;
+    }
+
+    .contacto_caja2{
+        width: 100%;
+        padding: 4% 0;
+    }
+
+    .paraInputs {
+        width: auto;
+    }
+
+    .contacto_caja2_button{
+        width: auto;
+    }
+
+    .pie p{
+        width: auto;
+        font-size: 1rem;
+    }
+}

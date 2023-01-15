@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+           /* position:relative;
+            top:100px;
+            left:100px;*/
+            transform: translate(200px,200px);
+            transition: transform 2s, background-color 2s,font-size 2s;
+           /* transform: translate(200px,200px) rotate(90deg) scale(2,2) skew(20deg,10deg);*/
+            /*transition: transform 2s, background-color 2s,font-size 2s;*/
+            /*transition: all 5s;NO UTILIZAR!!!*/
+            /*margin: 10px;*/
+           /* transform: translate(10px, 20px);
+            transform: translateX(20px);
+            transform: translate(-20px,-20px);
+            transform: translate(1000px, 1000px);*/
+            /*position: relative;
+            top: 50px;
+            left: 50px;*/
+           /* transition: all 1s;
+            transform: rotate(45deg);
+            transform: skew(20deg,10deg);
+           /* margin:100px;
+            transform: translate(100px, 200px) scale(2,2) rotate(45deg) skew(20deg,10deg);*/
+            background-color: green;
+            animation-name: pepe;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-duration: 2s;
+            animation-delay: 5s;
+        }
+        /*focus-- input*/
+        .box:hover{
+            background-color: green;
+            font-size: 2rem;
+            transform: translate(200px , 200px) scale(2,2);
+        }
+
+        /*
+        .box:hover{
+            transform: translate(100px , 100px) rotate(360deg) scale(2,2);
+            background-color: blue;
+            font-size:2rem;
+        }*
+        /*ANIMACION  */
+        @keyframes pepe {
+            0% { width: 100px; }
+            10%{ width: 50px; }
+            25%{ width: 300px; }
+            50%{ width: 200px;
+                    background-color: red; }
+            75%{ width: 300px;}
+            100%{ width: 100px;
+                    background-color:green;}
+        }
+       
+         .box2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(102, 0, 255);
+            border: 1px solid black;
+         }
+ 
+    </style>
+</head>
+<body>
+    <div class="box">
+        hola
+    </div>
+    <div class="box2">
+        hola
+    </div>
+
+    <h1 class="animate__animated animate__heartBeat animate__delay-2s animate__slower animate__infinite">HOLA MUNDO</h1>
+    <!-- 
+   <div class="caja animate__animated animate__lightSpeedInLeft animate__infinite animate__delay-4s animate__slower">
+
+   </div>
+
+   <h1 class="wow animate__bounceInUp"> hola </h1>
+
+   <script src="js/wow.min.js"></script>
+   <script> new WOW().init(); </script>
+   -->
+</body>
+</html>
