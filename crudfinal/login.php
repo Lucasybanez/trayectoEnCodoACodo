@@ -20,7 +20,11 @@
         $contraseña = $_POST["contraseña"];
 
         if($usuario=="administrador" && $contraseña=="cac"){
-            echo " <script> location.href='./admin.php'; </script> ";
+            echo "<h2 style='color:white;'>Acceso concedido, haga click aquí para ingresar: </h2>
+            <form action='./admin.php' method='POST'>
+            <input type='submit' name='acceder' value='acceder'>
+            </form>
+            ";
         }
 
         else{

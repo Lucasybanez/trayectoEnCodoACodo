@@ -20,6 +20,22 @@ td{
 }
 </style>
 
+<?php
+
+    $prueba = "elpepe";
+
+    if(isset($_POST["acceder"])){
+    }
+
+    else{
+        echo " <script> alert ('Se ha ingresado al administrador sin iniciar sesión, redirigiendo al login');
+        location.href='./login.php';
+        </script> ";
+    }
+
+
+?>
+
 <form action="" method=""></form>
 
 <section>
