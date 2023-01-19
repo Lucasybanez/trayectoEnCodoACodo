@@ -241,11 +241,14 @@
                 <P class="skills_titulo">Contacto</P>
                 <P>¿Quieres contactarme?
                     Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</P>
-                <input type="text" class="paraInputs" placeholder="Nombre">
-                <input type="text" class="paraInputs" placeholder="Email">
-                <input type="text" class="paraInputs" placeholder="Asunto">
-                <input type="text" class="paraInputs" placeholder="Mensaje">
-                <button class="exp_contenedor_caja2_button2 contacto_caja2_button">Enviar mensaje</button>
+                <form action="php/insertarMensaje.php" method="POST">
+                    <input type="text" class="paraInputs" placeholder="Nombre" name="nombre" id="nombre" required>
+                    <input type="email" class="paraInputs" placeholder="Email" name="email" id="email" required>
+                    <input type="text" class="paraInputs" placeholder="Asunto" name="asunto" id="asunto" required>
+                    <textarea type="text" class="paraInputs" placeholder="Mensaje" name="mensaje" id="mensaje"></textarea> <br>
+                    <input class="exp_contenedor_caja2_button2 contacto_caja2_button"  type="submit" value="Enviar" name="Enviar">
+                </form>
+
             </div>
         </div>
     </section>

@@ -4,21 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administrador</title>
+    <link rel="stylesheet" href="./css/admin.css">
+
 </head>
 <body>
-
-<style> 
-
-body{
-    font-family: 'arial';
-}
-
-td{
-    border: 1px solid black;
-    padding:0 1%;
-}
-</style>
 
 <?php
 
@@ -36,25 +26,63 @@ td{
 
 ?>
 
-<form action="" method=""></form>
+<section class="secTablas">
+        
+        <h2>BUZÓN DE MENSAJES</h2>
+    
+        <table class="secTablas_tabla">
+            <thead class="secTablas_tabla_thead">
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Asunto</th>
+                <th>Mensaje</th>
+            </thead>
+            <tbody>
+                <?php
 
-<section>
+                include("php/conexion.php");
+                $getmysql = new mysqlconex();
+                $getconex = $getmysql->conectar();
+    
+                $consulta = "SELECT * FROM mensajes";
+                $resultado = mysqli_query($getconex, $consulta);
+    
+                while($fila=mysqli_fetch_row($resultado)){
+                    echo "<tr>";
+                    echo "<td>$fila[0]</td>"; // Nombre
+                    echo "<td>$fila[1]</td>"; // Email
+                    echo "<td>$fila[2]</td>"; // Asunto
+                    echo "<td>$fila[3]</td>"; // Mensaje
+                }
+    
+                mysqli_close($getconex);
+                ?>
+            </tbody>
+        </table>
+    
+        </section>
+
+        <br>
+
+<section class="secTablas">
         
         <h2> LISTADO DE PROYECTOS</h2>
     
-        <table>
-            <thead>
+        <table class="secTablas_tabla">
+            <thead class="secTablas_tabla_thead">
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Repositorio</th>
                 <th>Demo</th>
                 <th>IMG</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </thead>
+
             <tbody>
                 <?php
     
-                include("php/conexion.php");
                 $getmysql = new mysqlconex();
                 $getconex = $getmysql->conectar();
     
@@ -66,9 +94,9 @@ td{
                     echo "<td>$fila[0]</td>"; //ID
                     echo "<td>$fila[1]</td>"; //Nombre
                     echo "<td>$fila[2]</td>"; //Descripcion
-                    echo "<td> <a href='$fila[3]'>$fila[3]<a/> </td>"; //Repo
-                    echo "<td> <a href='$fila[4]'>$fila[4]<a/> </td>"; //Demo
-                    echo "<td> <a href='$fila[5]'>$fila[5]<a/> </td>"; //IMG
+                    echo "<td> <a href='$fila[3]' >Ver</td>"; //Repo
+                    echo "<td> <a href='$fila[4]' >Ver</td>"; //Demo
+                    echo "<td> <a href='$fila[5]' >Ver</td>"; //IMG
                     echo "<td>
                             <form action='php/eliminar.php' method='POST'>
                             <input type='hidden' name='id' value='$fila[0]'>
@@ -77,7 +105,7 @@ td{
                             <input type='hidden' name='repo' value='$fila[3]'>
                             <input type='hidden' name='demo' value='$fila[4]'>
                             <input type='hidden' name='img' value='$fila[5]'>
-                            <input type='submit' name='eliminar' value='eliminar'>
+                            <input type='submit' name='eliminar' value='Borrar'>
                             </form>
                         </td>";
                     echo "<td>
@@ -88,7 +116,7 @@ td{
                             <input type='hidden' name='repo' value='$fila[3]'>
                             <input type='hidden' name='demo' value='$fila[4]'>
                             <input type='hidden' name='img' value='$fila[5]'>
-                            <input type='submit' name='editar' value='editar'>
+                            <input type='submit' name='editar' value='Editar'>
                         </form>
                     </td>";
                 }
@@ -97,13 +125,12 @@ td{
                 ?>
             </tbody>
         </table>
-
-        <br> <hr>
     
-        </section>
-        
+    </section>
 
-        <section>
+        <br>
+        
+        <section class="secTablas">
 
                 <h2>AGREGAR PROYECTO</h2>
             <br>
@@ -124,9 +151,8 @@ td{
                 <label for="nombre">IMG: </label>
                 <input type="text" name="img" id="img"> <br><br>
 
-                <input type="submit" name="registrar" value="registrar">
+                <input type="submit" name="registrar" value="Guardar" class="buttonSubmit">
             </form>
-            <br> <hr>
                 
         </section>
 

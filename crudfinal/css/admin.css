@@ -1,0 +1,42 @@
+body{
+    font-family: 'arial';
+    background-color: rgb(206, 204, 204);
+}
+
+.secTablas{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+    border-radius: 25px;
+    
+    color: rgb(59, 59, 59);
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow:10px 10px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);;
+}
+
+.secTablas_tabla{
+    width: 100%;
+    color: rgb(59, 59, 59);
+}
+
+.secTablas_tabla td{
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.secTablas_tabla_thead{
+    background-color: rgb(0, 136, 84);
+    color: white;
+}
+
+.buttonSubmit{
+
+        background-color: rgb(0, 136, 84);
+        padding: 1%;    
+        color: white;
+        border: 0;
+        text-decoration: none;
+        
+}
