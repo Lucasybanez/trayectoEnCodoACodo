@@ -76,8 +76,8 @@
                 <th>Repositorio</th>
                 <th>Demo</th>
                 <th>IMG</th>
-                <th>Editar</th>
                 <th>Eliminar</th>
+                <th>Editar</th>
             </thead>
 
             <tbody>

@@ -1,17 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lucas Ybañez</title>
-    <link rel="stylesheet" href="./css/inicio.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/welcome.css">
     <link rel="stylesheet" href="./css/sobremi.css">
     <link rel="stylesheet" href="./css/skills.css">
     <link rel="stylesheet" href="./css/formac.css">
     <link rel="stylesheet" href="./css/exp.css">
     <link rel="stylesheet" href="./css/contacto.css">
-    <link rel="stylesheet" href="./css/mobileView.css">
+    <link rel="stylesheet" href="./css/celView.css">
+
 <body>
     <nav>
         <div class="nave">
@@ -28,7 +33,7 @@
     </nav>
     <section>
         <div class="prese">
-            <div class="prese_caja1">
+            <div class="prese_caja1" data-aos="fade-right">
                 <p class="prese_caja1_p1">Hola, mi nombre es Lucas G. Ybañez y soy desarrollador</p>
                 <p class="prese_caja1_p2">Me dedico al desarrollo web fullstack y software de escritorio.
                 </p>
@@ -39,18 +44,18 @@
                     <a href="" class="nave_caja2_a">Currículo <img src="./img/iconoFlecha.png" alt=""></a>
                 </div>
             </div>
-            <img src="./img/fotoP.jpg" alt="" class="prese_caja2">
+            <img src="./img/fotoP.jpg" alt="" class="prese_caja2" data-aos="flip-left">
         </div>
     </section>
 
     <section id="sobre-mi">
-        <div class="sobre">
-            <p class="sobre_p1">Sobre mí</p>
-            <p>Nacido en Argentina, desde pequeño tuve una gran afinidad a la técnología. Con el pasar de los años aprendí sobre diseño gráfico, edición de vídeo, y marketing.</p>
-            <p>En el año 2020 comenzó mi introducción a la programación con C++, próximamente usaría Java para desarrollo android y otras tecnologías.</p>
-            <p>Actualmente con 22 años me encuentro terminando mi formación como desarrollador web en el proyecto Orcale ONE con Alura latam y Codo a codo 4.0.</p>
-            <p>Este 2023 cursaré mi último año en la tecnicatura universitaria en programación de la UTN, y mi formación en Rolling Code, donde aprenderé nuevas tecnologías como React y NodeJS.</p>
-            <img src="./img/firma.png" alt="">
+        <div class="sobre" >
+            <p class="sobre_p1" data-aos="fade-up">Sobre mí</p>
+            <p data-aos="fade-up">Nacido en Argentina, desde pequeño tuve una gran afinidad a la técnología. Con el pasar de los años aprendí sobre diseño gráfico, edición de vídeo, y marketing.</p>
+            <p data-aos="fade-up">En el año 2020 comenzó mi introducción a la programación con C++, próximamente usaría Java para desarrollo android y otras tecnologías.</p>
+            <p data-aos="fade-up">Actualmente con 22 años me encuentro terminando mi formación como desarrollador web en el proyecto Oracle ONE con Alura latam y Codo a codo 4.0.</p>
+            <p data-aos="fade-up">Este 2023 cursaré mi último año en la tecnicatura universitaria en programación de la UTN, y mi formación en Rolling Code, donde aprenderé nuevas tecnologías como React y NodeJS.</p>
+            <img src="./img/firma.png" alt="" data-aos="flip-left">
         </div>
     </section>
 
@@ -58,7 +63,7 @@
         <div class="skills" id="skills">
             <p class="skills_titulo">Skills</p>
             <p>Programación</p>
-            <div class="skills_contenedor">
+            <div class="skills_contenedor" data-aos="flip-down">
                 <div class="skills_caja">
                     <img src="./img/iconoHtml.png" alt="">
                     <p>HTML 5</p>
@@ -86,7 +91,7 @@
             </div>
 
             <p>Multimedia</p>
-            <div class="skills_contenedor">
+            <div class="skills_contenedor" data-aos="flip-down">
                 <div class="skills_caja">
                     <img src="./img/iconoPs.png" alt="">
                     <p>Photoshop</p>
@@ -108,7 +113,7 @@
 
         <div class="skills">
             <p class="skills_titulo">Soft skills</p>
-            <div class="skills_contenedor">
+            <div class="skills_contenedor" data-aos="flip-down">
                 <div class="skills_caja">
                     <img src="./img/iconoLiderazgo.png" alt="">
                     <p>Liderazgo</p>
@@ -131,7 +136,7 @@
 
         <div class="skills" id="hobbies">
             <p class="skills_titulo">Hobbies</p>
-            <div class="skills_contenedor">
+            <div class="skills_contenedor" data-aos="flip-down">
                 <div class="skills_caja">
                     <img src="./img/iconoGuitarra.png" alt="">
                     <p>Tocar guitarra</p>
@@ -163,7 +168,7 @@
         <div class="formac" >
             <p class="skills_titulo">Formación académica</p>
             <div class="formac_contenedor">
-                <div class="formac_contenedor_caja">
+                <div class="formac_contenedor_caja" data-aos="zoom-in">
                     <div class="formac_contenedor_caja_div">
                         <img src="./img/utnlogo.png" alt="" class="formac_contenedor_caja_div_img">
                     </div>
@@ -171,7 +176,7 @@
                     <p>Tec. universitaria en programación</p>
                     <p>2022 - En curso</p>
                 </div>
-                <div class="formac_contenedor_caja">
+                <div class="formac_contenedor_caja" data-aos="zoom-in">
                     <div class="formac_contenedor_caja_div">
                         <img src="./img/rollinglogo.png" alt="" class="formac_contenedor_caja_div_img">
                     </div>
@@ -179,7 +184,7 @@
                     <p>Desarrollo web fullstack: NodeJS</p>
                     <p>En curso</p>
                 </div>
-                <div class="formac_contenedor_caja">
+                <div class="formac_contenedor_caja" data-aos="zoom-in">
                     <div class="formac_contenedor_caja_div">
                         <img src="./img/aluralogo.svg" alt="" class="formac_contenedor_caja_div_img">
                     </div>
@@ -187,7 +192,7 @@
                     <p>Desarrollo web fullstack: Java</p>
                     <p>2022</p>
                 </div>
-                <div class="formac_contenedor_caja">
+                <div class="formac_contenedor_caja" data-aos="zoom-in">
                     <div class="formac_contenedor_caja_div">
                         <img src="./img/codoacodologo.webp" alt="" class="formac_contenedor_caja_div_img">
                     </div>
@@ -215,8 +220,8 @@
             while($fila=mysqli_fetch_row($resultado)){
                 echo "
                 <div class='exp_contenedor'>
-                <img src='$fila[5]' alt='' class='exp_contenedor_caja1'>
-                <div class='exp_contenedor_caja2'>
+                <img src='$fila[5]' alt='' class='exp_contenedor_caja1' data-aos='flip-left'>
+                <div class='exp_contenedor_caja2' data-aos='fade-up'>
                     <p class='exp_contenedor_caja2_tag'>$fila[1]</p>
                     <p>$fila[2]</p>
                     <a class='exp_contenedor_caja2_button1' href='$fila[3]'>Repositorio</a>
@@ -234,7 +239,7 @@
         </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" data-aos="fade-up">
         <div class="contacto">
             <img src="./img/telefono.png" alt="" class="contacto_caja1">
             <div class="contacto_caja2">
@@ -254,8 +259,14 @@
     </section>
 
     <footer class="pie">
-        <p>Página creada por Lucas G. Ybañez</p>
+        <p class="pie_p" >Página creada por Lucas G. Ybañez</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
